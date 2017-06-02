@@ -3,6 +3,8 @@
 #### JAVA_OPTS ，顾名思义，是用来设置JVM相关运行参数的变量。
 http://blog.csdn.net/kongls08/article/details/8468713
 
+[JVM参数配置大全](http://www.cnblogs.com/edwardlauxh/archive/2010/04/25/1918603.html)
+
 JVM:JAVA_OPTS="-server -Xms2048m -Xmx2048m -Xss512k"
 
 -server:一定要作为第一个参数，在多个CPU时性能佳  
