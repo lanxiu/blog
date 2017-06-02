@@ -51,47 +51,47 @@ SHR
 
 
 1. 打开终端，切换到root用户，输入：free -m查看内存状态
-[root@lxt lxt]# free -m
-             total       used       free     shared    buffers     cached
-Mem:           498        357        141          0         27        162
--/+ buffers/cache:        167        331
-Swap:         1023          0       1023
+[root@lxt lxt]# free -m  
+             total       used       free     shared    buffers     cached  
+Mem:           498        357        141          0         27        162  
+-/+ buffers/cache:        167        331  
+Swap:         1023          0       1023  
 
 
-2. 输入df -B M（或df -m）查看各分区当前使用情况
-[root@lxt lxt]# df -B M
-文件系统               1M-块        已用     可用 已用% 挂载点
-/dev/mapper/vg_lxt-lv_root
-                        12875M     4059M     8162M  34% /
-/dev/sda7                 194M       14M      170M   8% /boot
-tmpfs                     250M        1M      249M   1% /dev/shm
-（fdisk -l可查看磁盘分区情况）
+2. 输入df -B M（或df -m）查看各分区当前使用情况  
+[root@lxt lxt]# df -B M  
+文件系统               1M-块        已用     可用 已用% 挂载点  
+/dev/mapper/vg_lxt-lv_root  
+                        12875M     4059M     8162M  34% /  
+/dev/sda7                 194M       14M      170M   8% /boot  
+tmpfs                     250M        1M      249M   1% /dev/shm  
+（fdisk -l可查看磁盘分区情况）  
 
-3. 选择一个较大的分区，建立分区文件：
-[root@lxt lxt]# dd if=/dev/zero of=/swapadd bs=1024 count=524288
-524288+0 records in
-524288+0 records out
-536870912 bytes (537 MB) copied，13.0709 秒，41.1 MB/秒
-以上命令在根目录新建一个名为swapadd，大小为512M的虚拟内存文件
+3. 选择一个较大的分区，建立分区文件：  
+[root@lxt lxt]# dd if=/dev/zero of=/swapadd bs=1024 count=524288  
+524288+0 records in  
+524288+0 records out  
+536870912 bytes (537 MB) copied，13.0709 秒，41.1 MB/秒  
+以上命令在根目录新建一个名为swapadd，大小为512M的虚拟内存文件  
 
-4. 移动该文件到空间较大的其他分区：
-[root@lxt lxt]# mkdir /mnt/swap
-[root@lxt /]# mv swapadd /mnt/swap
+4. 移动该文件到空间较大的其他分区：  
+[root@lxt lxt]# mkdir /mnt/swap  
+[root@lxt /]# mv swapadd /mnt/swap  
 
-5. 执行以下命令启用虚拟内存并重启电脑
-[root@lxt /]# mkswap /mnt/swap/swapadd
-Setting up swapspace version 1, size = 524284 KiB
-no label, UUID=a5c8b651-6f64-4414-bb5f-580b742acfce
-[root@lxt /]# swapon /mnt/swap/swapadd
-查看内存：
-[root@lxt /]# free -m
-             total       used       free     shared    buffers     cached
-Mem:           498        492          6          0         15        302
--/+ buffers/cache:        174        323
-Swap:         1535          0       1535
+5. 执行以下命令启用虚拟内存并重启电脑  
+[root@lxt /]# mkswap /mnt/swap/swapadd  
+Setting up swapspace version 1, size = 524284 KiB  
+no label, UUID=a5c8b651-6f64-4414-bb5f-580b742acfce  
+[root@lxt /]# swapon /mnt/swap/swapadd  
+查看内存：  
+[root@lxt /]# free -m  
+             total       used       free     shared    buffers     cached  
+Mem:           498        492          6          0         15        302  
+-/+ buffers/cache:        174        323  
+Swap:         1535          0       1535  
 
-6. 如果不需要使用新增的虚拟内存，则输入：
-swapoff -v /mnt/swap/swapadd
+6. 如果不需要使用新增的虚拟内存，则输入：  
+swapoff -v /mnt/swap/swapadd   
 
 
 
