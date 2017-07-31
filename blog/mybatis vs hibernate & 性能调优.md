@@ -1,4 +1,4 @@
-(Hibernate与 MyBatis的比较)[http://blog.csdn.net/firejuly/article/details/8190229]
+[Hibernate与 MyBatis的比较](http://blog.csdn.net/firejuly/article/details/8190229)
 
 最近做了一个hibernate与MyBatis的对比总结，希望大家指出不对之处。
 
