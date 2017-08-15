@@ -15,4 +15,4 @@ http://vdisk.weibo.com/s/ukvKvUaqspGVl
 
 ## 树莓派
 [创客百科]（http://wiki.nxez.com/rpi:list-of-projects）
-[http://shumeipai.nxez.com/what-raspi-used-for](http://shumeipai.nxez.com/what-raspi-used-for)
+[树莓派实验室](http://shumeipai.nxez.com/what-raspi-used-for)
