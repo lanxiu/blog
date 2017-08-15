@@ -11,6 +11,7 @@
 ## 文化苦旅
 
 ## 徐霞客游记
+http://vdisk.weibo.com/s/ukvKvUaqspGVl
 
 ## 树莓派
-
+http://wiki.nxez.com/rpi:list-of-projects
