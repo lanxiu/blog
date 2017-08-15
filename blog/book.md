@@ -18,3 +18,5 @@ http://vdisk.weibo.com/s/ukvKvUaqspGVl
 [创客百科](http://wiki.nxez.com/rpi:list-of-projects)
 
 [树莓派实验室](http://shumeipai.nxez.com/what-raspi-used-for)
+
+[六足机器人](http://shumeipai.nxez.com/2017/08/07/hexapod-walker-raspberry-pi.html#more-3363)
