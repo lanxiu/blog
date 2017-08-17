@@ -11,7 +11,8 @@
 ## 文化苦旅
 
 ## 徐霞客游记
-http://vdisk.weibo.com/s/ukvKvUaqspGVl
+
+[下载](http://vdisk.weibo.com/s/ukvKvUaqspGVl)
 
 ## 树莓派
 
@@ -20,3 +21,9 @@ http://vdisk.weibo.com/s/ukvKvUaqspGVl
 [树莓派实验室](http://shumeipai.nxez.com/what-raspi-used-for)
 
 [六足机器人](http://shumeipai.nxez.com/2017/08/07/hexapod-walker-raspberry-pi.html#more-3363)
+
+>我毕业设计做的是基于物联网控制的机器人，如果你是计算机专业的，二选一的话，我推荐用raspberry PI B+,如果计算机基础不是很好，可以用Arduino,这个实现方便，开发周期短，本身带了很多类库。
+>嗯，直接告诉你，树莓派可以直接控制舵机和动力模块，但是仍然需要加一个电机驱动芯片，可以选择经典的 L298或者L9110。这里不需要arduino，当然可以连上。我做的是远程视频监控，用的是树莓派。
+
+## 猫鼠游戏 
+电影
