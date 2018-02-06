@@ -32,3 +32,7 @@
 读书小记
 
 ## http://caozhi.news.163.com/17/0907/12/CTNV2U04000181TI.html
+
+[阿里巴巴十年Java架构师](http://blog.csdn.net/t4i2b10X4c22nF6A/article/details/79062764)
+
+[html5前端](http://blog.csdn.net/t4i2b10X4c22nF6A/article/details/79062764)
