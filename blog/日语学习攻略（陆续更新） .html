@@ -1,0 +1,1461 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>日语学习攻略（陆续更新）</title></head><body><article class="markdown-body"><div class="toc">
+<ul>
+<li><a href="#0">0 前言</a></li>
+<li><a href="#1">1 基本方法和心得</a><ul>
+<li><a href="#11">1.1 学习的基本原则</a><ul>
+<li><a href="#111">1.1.1 端正心态：日语没那么难，也没那么简单</a></li>
+<li><a href="#112">1.1.2 平衡兴趣和效率</a></li>
+<li><a href="#113">1.1.3 快慢结合，厚积薄发</a></li>
+<li><a href="#114">1.1.4 一切从语境出发</a></li>
+</ul>
+</li>
+<li><a href="#12">1.2 自学还是报班？</a></li>
+<li><a href="#13">1.3 用什么教材？</a></li>
+<li><a href="#14">1.4 遇到问题怎么办？</a></li>
+<li><a href="#15">1.5 怎么记单词和语法?</a></li>
+<li><a href="#16">1.6 我听力死活听不懂啊</a></li>
+<li><a href="#17">1.7 考试怎么办？</a></li>
+</ul>
+</li>
+<li><a href="#2">2 基本学习流程</a><ul>
+<li><a href="#21-n4">2.1 入门贵神速：从零基础到N4</a></li>
+<li><a href="#22">2.2 最难啃的骨头：打牢语法基础，构建认识框架</a></li>
+<li><a href="#23-n3n1">2.3 漫长的进阶：从N3到N1</a></li>
+<li><a href="#24-n1">2.4 新的开始：从N1到翻译</a></li>
+<li><a href="#25">2.5 别说那么多废话，老子就是想搞快点玩小黄油！</a></li>
+</ul>
+</li>
+<li><a href="#3">3 学习工具</a><ul>
+<li><a href="#31">3.1 最广泛：谷歌</a></li>
+<li><a href="#32">3.2 最权威：辞典</a><ul>
+<li><a href="#321">3.2.1 辞典概况和平台安装</a></li>
+<li><a href="#322-n421">3.2.2 入门-N4（对应2.1）</a></li>
+<li><a href="#323-22">3.2.3 语法阶段（对应2.2）</a></li>
+<li><a href="#324-n3-n123">3.2.4 N3-N1（对应2.3）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>日语学习攻略（陆续更新）</strong></p>
+<h1 id="0"><a name="user-content-0" href="#0" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>0 前言</h1>
+<p>最近JLPT考试刚结束，大家考得怎么样哇？  <br />
+还没有正式学日语的家人们，你是否也很羡慕别人能啃生肉，能第一时间玩到自己想玩的游戏、看自己喜欢的本子、听自己爱听的音声，而自己就只能等汉化等得心赤挠？虽然现在有许多机翻工具可以用，但翻译出来的东西颠三倒四，即使你绞尽脑汁试图理解，却深深地感受到自己的理解和作者想表达的意思之间隔了一层厚厚的障壁、而你撞破了头也无法看清围墙里面是什么？  或者你已经开始学习日语，但面对海量的资源却十分迷茫无助，不知从何下手、千头万绪不知从何处理起？别害怕，我自己曾经就是这样，但现在我已经基本可以自由地在这广袤的日语海洋中遨游了，我可以的，你也可以  <br />
+我在学习日语的过程中走过不少弯路、吃了一些苦头，也许现在仍然在走弯路。写本教程，总结回顾自己的经历教训，希望能帮助更多想学日语但迟疑为难的、或是卡在瓶颈进退维谷的家人们，让你们有开始或继续前进的动力和助力。本攻略将全面介绍学习方法技巧、学习流程、学习材料工具，希望为你在各个学习阶段的学习保驾护航。另外，因为我本人就是为了玩小黄油才开始学日语的，所以我会直接面向这个实际需求，特别提到如何把玩游戏和学日语相结合。预计篇幅较长，我先放个初步的大纲在这里，有空慢慢更新。其实本来打算过了N1就写这个攻略的，但又感觉当时很多想法不成熟，现在各方面条件渐趋成熟，那么就开始写吧。<br />
+对了，学习方法总是因人而异的，我说好的你未必用得顺手，<strong>所以大家要用批判的眼光来看我的攻略，自己亲身实践后觉得不对一定要及时调整，不要盲从我</strong>。<br />
+先说说我的情况。我是从20年10月开始正式学习日语，21年12月通过N1考试，现在入门翻译，正在备考catti（全国翻译专业资格考试）。刚开始的基础是仅会五十音。19年我在淘宝买了新标日初、中级，当时有个培训机构做广告，买教材就送五十音入门课程，我跟着这个课学了一星期的五十音，之后就放着书吃了一年的灰。至于为啥过了一年我又开始学了呢，是因为当时有个特别想玩的牛头人小黄油夏色の壊れ物（夏色泡影）迟迟不出汉化，后来听说第一个接手的人卷钱跑路了????没有张屠户，我还得吃带毛猪？一气之下就下定决心要学日语，其实当时完全不敢想象自己会学到现在这个程度，只想着尽快能自己啃生肉就好了。说实话，第一次能够磕磕巴巴地看懂小黄油的文段，那感觉是真的爽啊????仿佛掀开了一个崭新世界的面纱。<br />
+JLPT考试我是直接报的N1，因为报名费好贵啊????总分133，各部分成绩45（字词语法）+49（阅读）+39（听力）。跟满分或者接近满分的大佬来说差远了，不过我自己还是相当满意的，因为我备考相当不足，尤其是听力非常拉跨——现在也很拉跨，压根就没想到自己能过。应该说最后能过有很大的运气成分，考场好、题简单、<strong>疫情以来通过率明显</strong>上升、超常发挥，等等。总之现在实际的听说读写各项水平还远远没达到N1。<br />
+学习过程主要是自学。除了一开始跟班学了一周五十音，之后自学到第四个月时报了个n1直通班，但因为老师十分拉胯，只会念ppt，问问题也难以给出准确解答，学习上也给不出什么全面合理的建议，甚至我脑子一热直接报N1的时候老师也不劝阻反而鼓励（可能通过了对他们机构有利吧    ），所以实际上还是相当于一路自学了过来????</p>
+<h1 id="1"><a name="user-content-1" href="#1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1 基本方法和心得</h1>
+<h2 id="11"><a name="user-content-11" href="#11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.1 学习的基本原则</h2>
+<p>这部分内容会比较抽象枯燥，但我觉得很重要，这关系到能不能掌握好学习的大方向。细节处犯错好纠正，但大方向上出岔子影响就大了。而且，具体的方法因人而异，根本的原则往往共通，希望大家把握好这些原则再根据自己的实际情况调整。</p>
+<h3 id="111"><a name="user-content-111" href="#111" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.1.1 端正心态：日语没那么难，也没那么简单</h3>
+<p>据我观察，人们对日语学习的往往有两种心态。一种把日语看得很难很高大上，另一种是轻视它。前者在没怎么正是接触日语的时候很常见，经常表现为对会日语的人、尤其是汉化者的崇拜，这在无意之间就人为地画了一道界限，仿佛掌握日语成了少数人的“特权”一样。实际上日语它也不过是一门语言而已，只要你开始坚持学下去，总有会的时候。并且因为它和汉语之间紧密的渊源，中国人学日语、日本人学汉语，在入门的时候都相对比较容易。而且日语学习者往往是对日语相关的东西有兴趣，这就又有了一层buff。所以这方面不必太担心。<br />
+后者在学习日语后不久容易出现。在B站、知乎、贴吧等平台，只要是和日语相关的内容，时不时就会看到“三个月零基础到N1”（经典三个月）、“我学了五十音就去做汉化了”、“我经常看动漫自然而然就会了”、“日语看不懂日语里的汉字我还不懂吗”等论调，可以说是急功近利的浮躁风气在语言学习方面的体现。比起畏难倾向，这种想法更普遍、更有害。首次，就语言学习能力而言，不排除有少数天才生活在相应语言环境下、未经系统学习就掌握的情况，但我想绝大多数人都既没那个天赋、也没那个环境吧？<strong>外语学习和母语学习</strong>不是一码事，条件、对象都变了，怎么能机械地把母语学习的经验套到外语上去呢？其次，就语言本身而言，日语再怎么和汉语相关，它也是门外语。虽然有汉字、汉语词汇，但经过千年来的传播和演变，从形音义到用法，中日语的汉字已经有很大差异了，学习时既要利用汉语母语的优势，也要关注那些差异，特别要注意大同但是小异的情况。至于那些过度夸大兴趣作用的想法，兴趣固然是个好老师，可学习多少是要吃点苦头的，一时的激情很难让你长久地走下去。<br />
+总之，希望大家从一开始就用平常心来看待日语和日语学习，别自卑也别自大。</p>
+<h3 id="112"><a name="user-content-112" href="#112" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.1.2 平衡兴趣和效率</h3>
+<p>兴趣和效率是学习的一对矛盾。正式的科班教育一般注重效率，而我们个人学习又希望有趣。注重效率的学习好处是基本功扎实、步步为营，坏处就是慢、无聊、难以及时跟上复杂多变的实际。兴趣驱动的学习好处是跟实际需求直接结合、有比较快的反馈和成就感，坏处是兴趣本身不稳定、学习时没有方向和轻重、容易遭遇远超过当前能力的内容而受到挫败、在知识体系主干还未稳固时就容易过早地走向一个很偏狭的分支。具体到日语学习上，效率学习是严格跟着课本、老师、教程一课一课往下学，兴趣学习是尽可能早、尽量多地去接触自己喜欢的东西（动漫、游戏等等）。人的精力时间有限，你在效率学习或兴趣学习任一方面花的时间多了，另一方面就少了，你的日语知识结构也就发生相应改变，这就是它们之间的斗争性。<br />
+但是，正如其他一切矛盾一样，兴趣和效率在对立的同时也有着同一性。兴趣能够转化为效率，当你沉浸于理解自己的兴趣文本时，甚至会忘记自己是在学习日语，既迅速又印象深刻地将里面涉及的知识点印入脑子。效率也能转化成兴趣，你日语的素养越高，就越能深入地进入到兴趣当中，获得成就感，进而保持和提升对它的兴趣，不至于因为迟迟看不懂而兴趣消退。<br />
+本攻略希望尽量做到效率和兴趣的平衡，<strong>在打好最必要基础的前提下尽早接触兴趣</strong>，并且教你在接触兴趣的同时弄清里面的知识点。</p>
+<h3 id="113"><a name="user-content-113" href="#113" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.1.3 快慢结合，厚积薄发</h3>
+<p>你可能听过这样的说法：每天背多少个单词或语法，坚持一年就会如何。而实际上很少有人能坚持下去，或者坚持下去了也没达到预期效果，为什么？我认为是没有处理好量变和质变的关系。<br />
+人的学习过程不是一条斜线均匀自然地上升，而是像爬坡地那样，<strong>遇到一个坡就要一鼓作气蹬上去</strong>，等爬上去之后就是一段平地，可以比较轻松自然地往前走，然后又是坡、又是平地……如果在上坡的时候泄了气，没有完成质变，那就会摔下来卡在那里。<br />
+就我的日语学习而言，正如我在大纲里所反映的那样，遇到了这么关键的几个“坡”：从零学习、从N4到建立知识框架、N1、翻译。目前为止最困难的是第二个，我会着重讲。我想可能也是日语学习者共同的“坡”。</p>
+<h3 id="114"><a name="user-content-114" href="#114" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.1.4 一切从语境出发</h3>
+<p>日语里有个词叫“文脈”，意思相当于汉语的“语境”。文本的脉络就好像流动的河水一样，由一滴滴水（词）组成，你可以很轻松感受到河水整体的流动情况，但要<strong>你从里面提取出一滴水、甚至是一个水分子出来观察分析可就不容易了</strong>。在学习时，与其关注词，不如关注词组、句子、语段、篇章，<strong>先注重整体把握</strong>，再慢慢向下。这个道理渗透到了日语学习的全过程全方面，比如：<br />
+阅读，不要一遇到不会的词、语法就去查，要先把握全篇、段落、句子的大义，根据上下文去猜测，然后再查；<br />
+练习听力，不要一句一句话甚至一个一个词暂停去听，而要先反复听全篇，知道主旨大意，再去听那些听不懂的地方。实在听不懂的就别纠结了，可以去看听力原文了；<br />
+做翻译，不是一发现字典里有可以对译的表达就原模原样地照搬过来，好的翻译一定是根据它在语境中的具体含义和目的语自身的特点进行合适的翻译的。<br />
+……<br />
+顺便一提，文脉的汉语意思不只是语境，还可以表示文化、文明的传承脉络，还是一个风水术语。所以遇到汉日同形词，一定要多长个心眼，不要盲目照搬。尤其是别最后日语学得马马虎虎，汉语也搞得一股带佐味，捡了芝麻丢了西瓜。<strong>双语水平要互相促进而不是拖累</strong>。之后可能还会涉及到一些这样的词，到时候再说。</p>
+<h2 id="12"><a name="user-content-12" href="#12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.2 自学还是报班？</h2>
+<p>除了以下两种例外：<br />
+课程对你来说很便宜，不差那点钱<br />
+在高考考研留学工作等方面要求有日语能力证明<br />
+否则：<br />
+<strong>不要报班！不要报班！不要报班！</strong><br />
+我就是纯纯的大冤种，花了7000报了N1直通班，之后悔得肠子都青了。<br />
+培训机构的坑包括但不限于：<br />
+没水平，问他还不如自己查<br />
+没耐心，根本不会认真对待你的问题，说了会回答第二天就没下文了<br />
+只会按部就班跟着计划走，丝毫不关心学生实际问题<br />
+没干货，聊天吹水混课时<br />
+没互动，念完PPT了事<br />
+……<br />
+我见过最便宜的机构大概是五千多吧。5000是什么概念？某宝卡西欧官方正品的最新版电子词典E-XA300价格是3470（咸鱼两千多），5000快够你买两部了！这玩意<strong>足够你从零基础一路用到日语博士往上</strong>了。关于卡西欧词典，之后讲辞典还会讲到。<br />
+最重要的是，<strong>学习最根本的还是靠自己</strong>，再好的老师也不可能随时给你解决所有问题，所以养成自学的习惯和能力是根本性的。这年头日语学习资料多如牛毛，真的够你自学的了。</p>
+<h2 id="13"><a name="user-content-13" href="#13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.3 用什么教材？</h2>
+<p>本攻略所使用教材的最低限度如下：<br />
+新标日初、中级教材及同步练习册<br />
+TRY！新日语能力考试N1语法必备<br />
+标准日语语法（第二版）顾明耀主编 高等教育出版社2004年出版<br />
+选择它们的理由嘛，因为我自己就是用的这些<br />
+我说说它们的特点：<br />
+新标日：内容有一定趣味性；采用教育语法适合入门；内容和JLPT对应可以自己评估当前水平；课文有听力音频，使用广泛容易找到讲解。<br />
+TRY：短小精炼，16篇短文，每篇都精心设计，将语法融入其中。<br />
+标准日语语法：考研指定用书之一，专业语法书系统完整，不是市面上那些纯粹罗列条目的所谓“语法书”可比的；有一些错误或含混不清的地方，但无伤大雅，在大陆算是比较好的语法教材；以学校语法为基础，同时列出不少流派论述，书后附录有各主流语法学体系术语对照表，方便读者弄清概念。因为你在各种资料中会遇见五花八门的术语，有这个表还是很方便的。<br />
+以上三套教材我都建议你买纸质版的，因为使用得太频繁了。另外，推荐你也同时用其他教材来做听力和阅读练习，以增加输入量，但刚开始以新标日为主。也可以选择其他教材作为主要教材，<br />
+但有3个选择标准要注意：<br />
+课文一定要有对应的听力音频<br />
+趣味性比专业性更重要<br />
+用的人比较多，容易找到讲解等相关学习资料<br />
+顺便说一句，<strong>千万别买皮细庚那本《新编日语语法教程》</strong>，虽然它很有名。2007年的时候日本出了个敬语指南，把敬语分成五类，皮这本书2011年出版，却还用的三分类，真的不知道它新在何处。<br />
+<strong>蓝宝书和红宝书也不建议买</strong>。红宝书是按照音序排单词的，抓不住重点。众所周知，按音序排的单词书，一般人很难背得下去。蓝宝书有更方便、更权威的免费替代，讲语法的时候我会讲。我自己在刚入门的时候买了N5-N1的两大宝书，没翻几次就吃灰了，你就别花这冤枉钱了。<br />
+其余还有额外材料，之后会在1.5单词语法和第三章学习工具里细说。</p>
+<h2 id="14"><a name="user-content-14" href="#14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.4 遇到问题怎么办？</h2>
+<p>很简单，两步：<br />
+第一步，动用第三章我教你的一切学习工具去搞，99.99%的情况能解决。<br />
+第二步，搞不定就放弃。<br />
+因为如果第一步解决不了，那么这个问题无非就是以下两种情形：<br />
+第一，太偏太怪，日本人都懵逼的那种。这种问题不知道也无所谓。<br />
+第二，是个正常问题但是超出你的认知，以你现在的水平就是看着答案和讲解也理解不了。这种随着你水平的提高自然就不是问题了。</p>
+<h2 id="15"><a name="user-content-15" href="#15" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.5 怎么记单词和语法?</h2>
+<p><strong>背单词语法最好的办法就是不背单词和语法</strong><br />
+有点骇人听闻了哈。准确地说，是不刻意去背单词和语法。<br />
+这里的“好”，是指能够较好地达到1.1.2讲到的平衡兴趣和效率。刻意背单词背语法，短时间内应付考试效率确实高，但实在是一件能够极大地消磨人的兴趣的无聊事，得不偿失。<br />
+假设你到了一个新地方，有几百号人你要认识，怎么能比较快且全还深地认识他们呢？坐在办公室里，把他们的档案调出来，然后一一地看吗？这种方法你认识到的只能是“死”人。要认识“活”人，你就得在各个场合下经常遇到他。今天在办公室碰到，明天在健身房，后天甚至一起去撸串……总之，<strong>你们在各种场景下见面的次数越大</strong>，他在你心里的形象就越丰满、印象就越深刻，你们就越有可能成为好朋友。<br />
+回到语言学习上来，这个道理就是1.1.4讲的：<strong>一切从语境出发</strong>！你得在各种语境下和单词语法碰面，而不是抱着字典、单词书、语法手册搁那硬磕。要增加语境种类和碰面频率，就需要<strong>有大量的语音、文字的输入</strong>，这就是我在1.3选教材建议你多准备一些教材的根本原因。到这里有人肯定要说了，不是说要大量输入吗？教材多没意思啊，我直接看我感兴趣的、听我感兴趣的不好吗？同志，你又忘了我1.1.2 说的平衡兴趣和效率了。作为初学者，<strong>自己是很难把控输入材料的难度的</strong>，你感兴趣的材料，难度往往大大超出当前水平。在没有足够能力基础的情况下啃硬骨头，不光没效率，而且会有挫败感、消磨兴趣。教材经过长期大量教学检验的，适合大部分人。而且我说趣味性大于专业性，就是因为兴趣对效率的正面作用。<br />
+选教材的这些标准大部分同样适用于选择你感兴趣的材料，并且得再加一条：<strong>材料的难度只比你的水平高一点</strong>，有八成以上是你懂的，而不是八成不懂。如下：<br />
+文字材料一定要有对应的听力音频，听力材料一定要有对应的原文（不是机器听出来的那种哈！）<br />
+趣味性比专业性更重要<br />
+材料的难度只比你的水平高一点<br />
+但是，上面的这个比喻和其他一切类比推理一样，很难保证严谨性，两个事物可以在某些方面相似而另外一些方面完全相反。字典、单词书、语法手册对单词语法的反映的准确完整程度当然是远远超出档案对一个活生生的人的反映的。所以，虽说不刻意背单词语法，但一定要勤翻辞典和语法手册，这也是为了增加你们之间的碰面机会。翻阅不是要仔细把这个词的所有义项甚至相关词汇都看一遍（那就又变成查档案了），只需找到符合当前语境的意思即可，重点看例句。<br />
+话说回来了，肯定还是会有人担心：不刻意记效果会好吗？好吧，如果你一定要记，我推荐以下方式。<br />
+记单词：<br />
+首先想想，我们背的单词最好是什么样的单词？它最好<strong>重要、用得多</strong>。你总不想背一堆八百年都难得一见的词吧？要是<strong>数量还少</strong>就更好了。那么你怎么在不懂单词的情况下、找到日语中这样的词呢？<br />
+众所周知中国人学日语的一大优势便是汉字。汉语中汉字就是基本单位，日语虽然没到这个程度，但汉字往往也是一句话中表记实际意义的部分。那么为什么不以汉字为基础来记单词呢？<br />
+2010年日本发布的、当前最新的常用汉字表包含了2136个汉字，主表给出了常见的汉字及其音训、组词，附表是一些熟字训。掌握这2136个汉字是什么水平？从JLPT考试来看，应该是超过N1的词汇量要求的。另外日本有个汉字水平考试（日本漢字能力検定），从1级开始、由高到低分了12个等级，常用汉字对应的正好是2级（前面还有准1级、1级），相当于日本高中毕业读大学的汉字水平。<br />
+不过我们是整体学习日语而不是专攻日本汉字，所以这个表最需要关注的是汉字的训读部分（一般训读写成平假名，音读用片假名，该表也不例外），尤其是训读出来的这个词是动词时。为什么呢？日语词汇按照来源来分，最基本的类型是和语词、汉字词和外来语词（混合词是三者的复合）。和语词是日本固有的词汇，汉字传入后可以用汉字来表记；汉字词是古代汉语传入、或近代以来日本人创造的音读词（和製漢語）；外来语主要指从西方引入的词，数量不多。对于我们来说，和语词有以下一些重要的特征：<br />
+训读<br />
+意思很多，用法灵活<br />
+经常出现能够造词的词素<br />
+数量少，但使用频率高，在基础词汇中占比高。汉字词则相反，数量最多但用得不多。<br />
+中国人很陌生<br />
+从特征2-4来看，简直完美契合我们背单词的需求。但是先别急，我再和你讲讲日语的特征。我们知道，谓语往往是一句话中最核心的部分，对于日语这门黏着语而言谓语的作用更加突出。那么谓语往往是什么词呢？动词。所以我说<strong>最应关注那些训读的动词</strong>（在动词分类里基本和五段动词、一段动词重合）。<br />
+到这里我们抓住了最重要的一类词。怎么来记呢？重点是要注意不同字、词<strong>意义之间的联系</strong><br />
+从汉字出发，找到和这个字紧密关联的一系列字。比如，常用汉字表第二个字是“哀”，哀有什么意思相近的字？愁、悲、忧、郁……有什么意思相反的字？乐、喜、欢、悦……<br />
+筛选出这些字的训读动词，你会发现近义字的训读往往有共通之处<br />
+在辞典里查训读动词<br />
+记训读动词的近义词（日日辞典解释里会有，或者直接查近义词词典）、常与它搭配的词（看例句，或者直接上语料库找用得最多的）、作为词素的造词作用（主要是复合词的前、后缀）<br />
+这样，你就基于汉字、基于它们的训读动词，一连串捞起了一系列的词，这些词<strong>意思相近，实际使用时往往相伴出现</strong>。而且还有个额外收获，你学到了和语词的汉字表记。<br />
+说了这么多，我依然要重申：<strong>背单词最好的办法就是不刻意去背</strong>。上述的汉字记词法固然逻辑严密，但是<strong>我们是日语学习者，不是日语研究者</strong>。搞语义的分类是研究语言学、自然语言处理、编纂辞典的人该干的事，而他们已经过了学习日语的阶段了。汉字记词法光是找词就会耗费大量精力和时间，找完了你还未必能记住，这些精力不如用在整篇文本的听和读上。</p>
+<p>记语法：<br />
+这里就讲一下1.3中蓝宝书的替代品，你就把它们当成语法辞典来用。我还是强烈建议你达到N4之后再去看语法。<br />
+毎日のんびり日本語教師：<a href="https://nihongonosensei.net/">https://nihongonosensei.net/</a><br />
+絵でわかる日本語：<a href="https://www.edewakaru.com/">https://www.edewakaru.com/</a><br />
+前者是一个在中国教日语的日本老师搞的，基本意思和例句有中文翻译，解说是日语。<br />
+后者是用漫画来说明语法的，形象生动。全是日语，但它很擅长用简单的日语来讲解复杂的表达。<br />
+两者的共同特征是全，前者甚至搞了些“N0”的语法；方便，打开网站Ctrl+F直接搜；标出了语法间的联系。<br />
+前期主要用前者，到达N3之后主要用后者。<br />
+后面介绍工具的时候再详细展开，这里就不细说了。另外重申：记语法最好的方式是不刻意去记。遇到不熟悉的可以多查查，但别钻进去了。语法研究这块日语不如汉语、英语，本身它自己就有些未解之谜，众说纷纭。比如像こそあ指示词，够基础了吧？这里面水深着哪。场所指示好办，文脉指示复杂，日语学界都没搞清楚。</p>
+<h2 id="16"><a name="user-content-16" href="#16" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.6 我听力死活听不懂啊</h2>
+<p>我前面要求你“文字材料一定要有对应的听力音频，听力材料一定要有对应的原文”，就是为了在平时学习中就解决听力问题。<br />
+选了材料，如何用呢？光看文字吗？不是的，那样学出来的日语是听不清楚、念不利索的（就像我一样）。学新东西时，按照以下步骤：<br />
+先不看文本，光听，听它个十遍八遍，听懂大意<br />
+听一句暂停一句，复述跟读<br />
+看文本，标出不懂的地方<br />
+看讲解，讲解没有的，动用我第三章教你的学习工具去查。讲解有的也可以查，但查的时候要注意<strong>不要延伸拓展得太远</strong><br />
+复述跟读，每次复述内容逐渐增多，到三、四句<br />
+影子跟读，滞后于录音两三个词跟读，努力与录音的语速节奏合拍。刚开始可以看着文本，逐渐过渡到不看。<br />
+影子跟读还有一点很重要。实际上影子跟读分为侧重声音的跟读和侧重内容的跟读两种。刚开始你是跟着它的声音走的，大脑来不及反应意思，但渐渐地你要练到<strong>想着意思、下意识地动嘴皮子</strong>的程度，这个时候材料的语法、单词才真正被你充分吸收了。<br />
+如果你在跟读练习中感觉自己的发音很有问题，可以用这本书来做一下练习：新完全掌握日本语语音语调入门  北京语言大学出版社2021年出版。书内容不多，但是够用了。<br />
+如果想系统学习语音，推荐上海外国语大学凌蓉老师的《日语语音》慕课：<a href="https://www.icourse163.org/course/SHISU-1461814172">https://www.icourse163.org/course/SHISU-1461814172</a><br />
+但说实话，我觉得语音属于<strong>锦上添花，不好也问题不大</strong>，没这方面需求的话别花太大功夫。你想想，你普通话发音足够标准吗？不标准很影响你交流吗？母语发音都没那么讲究怎么一到外语就讲究了？而且我听一些日语老教授的发音非常奇怪，但这影响人家成为教授了吗？</p>
+<h2 id="17"><a name="user-content-17" href="#17" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.7 考试怎么办？</h2>
+<p>考察日语整体水平的考试，我知道的就是JLPT（日本語能力試験）和JTEST（J.TEST実用日本語検定）。<br />
+JLPT就是我们常说的N5-N1的考试。JTEST难度上限超过JLPT，满分1000，N1相当于700分，N2相当于600分。<br />
+从知名度和认可度来看，JLPT似乎要高于JTEST。但另一方面，JLPT僧多粥少，考试名额很难抢，一年才两次（JTEST两个月一次）。如果你对日语证书有需求，可以根据实际情况来选择，不一定要选JLPT。<br />
+如果你要考JLPT、又像我一样贫穷的话，我建议你像我一样直接报N1。反正N1、N2都是550一次，何必多花钱去考个半吊子的N2呢？<br />
+别以为N1的难度有多吓人。首先它都是选择题，其次它只考察你听和读的能力。最重要的是，疫情以来，通过率是有明显提升的（如下图，日本国外的大部分考生都是中国考生）。你按照攻略说的做到位，考试就是水到渠成的事了。真正的难题其实是能不能顺利踏进考场参加考试。报名方面B站有抢名额教程（<a href="https://www.bilibili.com/video/BV1dg411G7cz?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1dg411G7cz?spm_id_from=333.999.0.0</a>）但能不能不发生疫情顺利开考就要听天由命了。<br />
+备考的话买历年真题做一做就行了，没必要买什么练习册。别担心题不够做，你认认真真做下来、把涉及的每个知识点都搞懂绝对够了。考试中是有可能出到往年原题的。<br />
+N1考过了，恭喜你终于正式入了日语的门了。考过N1前它是最高目标，考过之后就是新起点。之后干什么呢？你当然可以挑战一下JTEST之类的，也可以像我一样试试考CATTI（全国翻译资格水平考试），这玩意不仅日语要求比N1高得多，还可以锻炼你的母语水平。<br />
+抽象枯燥的基本理论部分到这里就结束了，接下来会越来越形而下、过渡到实际操作的层面，大伙跟上我的脚步！</p>
+<p><em>日本国外N1N2合格率</em></p>
+<table>
+<thead>
+<tr>
+<th>year</th>
+<th align="center">N1</th>
+<th align="right">N2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>201807</td>
+<td align="center">33.00%</td>
+<td align="right">41.80%</td>
+</tr>
+<tr>
+<td>201812</td>
+<td align="center">30.10%</td>
+<td align="right">39.90%</td>
+</tr>
+<tr>
+<td>201907</td>
+<td align="center">29.20%</td>
+<td align="right">37.30%</td>
+</tr>
+<tr>
+<td>201912</td>
+<td align="center">33.00%</td>
+<td align="right">41.70%</td>
+</tr>
+<tr>
+<td>202007</td>
+<td align="center">无</td>
+<td align="right">无</td>
+</tr>
+<tr>
+<td>202012</td>
+<td align="center">48.30%</td>
+<td align="right">62.10%</td>
+</tr>
+<tr>
+<td>202107</td>
+<td align="center">47.90%</td>
+<td align="right">54.00%</td>
+</tr>
+<tr>
+<td>202112</td>
+<td align="center">42.70%</td>
+<td align="right">58.40%</td>
+</tr>
+</tbody>
+</table>
+<pre><code>书你上这个网站去找：https://zh.booksc.xyz/
+音频：https://space.bilibili.com/485094824/video
+高中生新标日初级、中级上就差不多够了，注意下新版第二版，别下成老版本了。标准日语语法也可以看看，tryN1就不需要了，以后再学。
+你高中生的话，注意时间安排哈。如果一定要学日语，跟家里人说清楚，找教高考日语的老师好好学。我这个攻略主要是面向有空闲时间的业余自学者的，大部分不适合你这种情况。
+</code></pre>
+
+<h1 id="2"><a name="user-content-2" href="#2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2 基本学习流程</h1>
+<h2 id="21-n4"><a name="user-content-21-n4" href="#21-n4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.1 入门贵神速：从零基础到N4</h2>
+<p>还记得我在1.1.3所说的<strong>遇到一个坡就要一鼓作气爬上去吗</strong>？入门就是你的第一个坡，所以要快。有学不懂的地方也需要花时间停留，<strong>重要的是迅速入门</strong>。入门的内容很基础，基础就意味着高频使用。<strong>一个随时都在你面前刷存在感的东西，你想学不会都难</strong>。<br />
+五十音：2、3天时间。随便什么教程都行。不用记到能默写的程度。看到、听到能反映过来是哪个就行了。你自己发音不准也没事，之后有大量的跟读训练给你矫正。发音这块再多说一句，不送气清音和浊音，大部分中国人很难区分，这个是普通话和日语语音的客观差异造成的，不要怀疑自己。像吴语等部分方言的使用者就能区分。<strong>如果实在不行就算了</strong>（就像我一样）。不用担心一个音分不清楚就会影响你听力，凭借单词量和语境一般不会判断错的，还是那句话：一切从语境出发。<br />
+标日初级上下册（对应N5、N4）：主要通过听力跟读和网课视频来学习。网课B站多如牛毛，<strong>随便找一个就行</strong>，我当初看的是叶子老师，有几课没有，问题不大。别选来选去收藏一堆又不看，基础的东西还能玩出花来？<br />
+学习流程，<strong>首先进行听力跟读</strong>。先不看文本也不看网课，预先听内容。也不要担心听不懂。如果你常年看动漫什么的，N4以内的东西至少有三成是你听着熟悉的。听力跟读的步骤见1.6的6步骤，如果刚开始有困难，至少要进行到第3步。<br />
+然后开始看网课视频，开2倍速看。<strong>要有紧张感，集中精力</strong>，慢悠悠的反而容易分神。<br />
+每天推进一课。大概率你的听力跟读进度跟不上网课学习进度，不过没关系，下一阶段2.2可以继续做。</p>
+<h2 id="22"><a name="user-content-22" href="#22" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.2 最难啃的骨头：打牢语法基础，构建认识框架</h2>
+<p>学完N4的内容之后，你应该对日语有了一些朦朦胧胧的感性认识，但同时会感觉到学的东西很乱，不成体系。没关系，这不是你的问题，新标日的语法确实没有做很好地归类。事实上，到N4日语最基本的语法就已经学完了，之后的所谓“语法”，大都是这些最基本的语法再加上具体的词的组合。要建立对日语整体的认识框架，就该第二本教材出场了：《标准日语语法（第二版）》<br />
+在这里我要说一下“文法”这个概念的翻译问题。有人喜欢直接照搬日语的“文法”，将它等同于汉语的“语法”。这是有点问题的。一个语法体系，<strong>最广义的内容包含了构词法、词法、句法、篇章法，最狭义的则只包含词法、句法</strong>。你直接照搬“文法”，就只包含篇章法了。<br />
+不管是学习语言还是研究语言，<strong>词法都是主要对象</strong>。所以我们通常说的“语法”，往往只是指词法。从本书的结构来看，除开绪论，第2-8章的内容都是词法，第9章句法，第10章篇章法。在这一阶段你只需要看第1-8章。是不是听着挺多的？没关系，我再给你精简：<br />
+第1章，略看。重点：p7、8词的分类（这是第2-7章的大纲，很重要）；第四节。其他看不懂的，略过。<br />
+第2章，略看。重点：p21-32一些名词的特殊用法，尤其是形式名词，知道形式名词的概念作用、包含哪些即可，具体用法可以慢慢看。<br />
+<strong>第3章，很重要，精看。</strong>但第9节只需精看得る<br />
+<strong>第4章，很重要，精看。</strong><br />
+第5章，略看。重点：第二节副词，尤其是p151拟声拟态词的概念和特点。<br />
+<strong>第6章，很重要，精看。</strong>但第9节只需精看ず、ごとし、べし<br />
+<strong>第7章，很重要，精看。</strong><br />
+第8章，略看。知道敬语分类和每类的基本用法即可。<br />
+这样，<strong>最重要的实际上只有3、4、6、7</strong>。而且说是精看，但如果有什么细节处不懂的，也没关系，不要纠结，都是基础的东西，以后会遇到无数遍。<strong>重要的是对日语词的分类、作用有个总体印象</strong>。<br />
+在看的过程中，你会发现本书和新标日的语法讲解大不相同。这并不是因为有些人说的新标日的语法不好，而是因为它们采用了两套完全不同的语法体系：学校语法和教育语法。<br />
+学校语法直接和古典日语的语法体系衔接，本来是给日本人用的，是在他们已经有母语基础的情况下、<strong>为了母语使用的规范化和继续学习古典日语</strong>而搞出来的。中国科班之所以用这套，是因为专业学生要学习古典日语。<br />
+教育语法是考虑到<strong>非母语者日语学习者的特点</strong>、面向海外教育而推出的一套比较<strong>贴近现代语言学</strong>的语法体系，适合业余自学。你之所以觉得新标日不行，那是因为新标日不是专门的语法书，没有系统地教你教育语法。日本人如果想成为日语教师，拿到从业资格，就必须学习教育语法。<br />
+但是，就目前大部分的日语学习资料和辞典所采用的语法体系来看，学校语法是主流，但有时又会混用一些教育语法的术语概念进去。<br />
+所以，为了看懂这些资料和辞典，你就得掌握学校语法，这是我让你在这时候学习本书的一大理由。<br />
+另一个理由是，建立了日语基本语法的整体认知，你就知道如何断句了，知道句子各部分的关系。遇到那些基本语法+某个词的复合的语法化句型，就知道最核心、表达实际意义的词是哪个而其它的是辅助，也就知道<strong>查辞典的时候该查哪个词</strong>，由此就真正具备了能够解读陌生材料的基本能力——换句话说，这时候你其实已经可以开始玩小黄油、或者其他一切你感兴趣的东西了。<br />
+以上两个阶段的用时，不要超过三个月，第一阶段五十天，剩下的时间做第一阶段没做完的听力跟读以及第二阶段的语法概览。</p>
+<h2 id="23-n3n1"><a name="user-content-23-n3n1" href="#23-n3n1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.3 漫长的进阶：从N3到N1</h2>
+<p>这个阶段没啥好说的，基本就是平稳上升，没有什么大的坎。因为前面的基础框架你已经有了，这个阶段就是往里面填东西。你会发现有很多这个阶段的内容在《标准日语语法》里出现过，之前没让你细看的现在可以慢慢细看了，遇到相关的就到《标准日语语法》去回顾。<br />
+注意做好听力跟读即可，之前两个阶段没来得及做的，这个阶段慢慢做。<br />
+学N1的时候可以用tryN1，比较精炼。N1的语法很多都是书面语、古语残留，用得不广泛，标日高级内容比较多，这时候用它做教材就比较费时间了。当然你也可以拿标日高级做听力跟读。</p>
+<h2 id="24-n1"><a name="user-content-24-n1" href="#24-n1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.4 新的开始：从N1到翻译</h2>
+<p>我自己就处在这个阶段。<br />
+翻译这个东西看着简单，实际上手做过、和好的译文对比过，你就能感受到水有多深了。<br />
+我个人认为要做好翻译，必须具备两种能力：<br />
+最基础的，双语能力。包括熟练的听说读写能力，对两门语言特点的基本了解和比较，根据文体的不同有针对性地做调整的能力，熟练检索利用各种工具书、资料的能力，不被工具书牵着走能够根据语境灵活变化的能力。<br />
+翻译理论和技巧。理解翻译理论，才能保证在大方向上不出错。熟练运用翻译技巧，才能不被源语的形式结构所束缚，翻译出地道自然的目的语。<br />
+但从现实的各种翻译实践来看，不能说是不尽如人意吧，至少也可以说是惨不忍睹 像民间汉化犯错倒也罢了，毕竟是业余的、没受过专业训练，但像出版界的各种离谱译文、乃至翻译专业教材上的种种错误，真的就是翻译态度、职业道德问题了<br />
+我说一下我目前学习翻译用的材料吧<br />
+首先CATTI笔译、口译的官方教材肯定是少不了的<br />
+笔译日译汉：<br />
+《日汉翻译教程》（高宁主编，上海外语教育出版社），知名度搞，但老实说这本书实际用起来问题挺多，但我也懒得费时间去找更好的了（真的还有更好的吗），也只能捏着鼻子用了。<br />
+笔译汉译日：《翻译必读》（翻訳必携）1、2、4册，日本人写的汉译日，第1册是基本理论和经验，2-4是实际训练，网上流传的电子版的，缺第3册。纸质版很贵。<br />
+口译：《中日口译教程初、中级》（刘丽华 外语教学与研究出版社），才开始用，听说写得相当好。<br />
+还有就是翻译培训机构的课程材料，就不细说了<br />
+对于我这种N1速成的半吊子，翻译确实是相当大的挑战。就以最简单的catti三级来说，要求掌握8000个词汇，听上去是不是还不到N1的10000要求？但JLPT这类考试要求的是能认就行了，换句话说就是消极词汇，翻译要求的可是实打实的积极词汇。JLPT这类考试你不必听得全懂、读得全懂，翻译要求你从整体到每个细节都把握准确，你的理解稍微一跑偏，立马就能从你的翻译中暴露出来</p>
+<h2 id="25"><a name="user-content-25" href="#25" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.5 别说那么多废话，老子就是想搞快点玩小黄油！</h2>
+<p>终于到了大家最感兴趣的部分了。<br />
+什么时候可以开始玩小黄油（以及其他一切你有兴趣的东西）呢？有人会说我会个五十音就开始玩了，emmm我只能说很有挑战精神 正如我在2.2时所说，最低条件：2.2结束，对日语体系有个整体认识的时候。也就是说从零基础开始学习三个月之后。<br />
+但这个只是最低条件，这个时候开始就意味着你一句话就得翻好几次辞典，能玩是能玩，但全无游戏体验。如果你能等到N3结束（2.3前期），有了一定单词量再玩会好很多，之后你如果没有考试的需要，抛开课本单玩游戏也是可以的，但是听力跟读一定不能忘！除非你想像我一样听力和念书都奇差。当然2.2结束时你完全可以进游戏试试，来检验这三个月以来的学习成果。当你第一次发现自己可以不看中文翻译理解一句话、一个文段时，那种喜悦感和成就感将会是你继续往下学的强大动力<br />
+刚开始玩小黄油，<strong>尽量选那些贴近现代人日常生活的、人物对话比较多的（但是人物个性不要太突出，像说话古风古调的、讲方言的、黑社会、辣妹JK等等就不好）、没有太多梗的游戏</strong>。最好是选择你<strong>之前玩过、但看得不仔细的汉化版</strong>的游戏，民间汉化虽然不准确，但好歹有个参考。像柚子社的哦对了，<strong>别选拔作</strong>，不然你会体验到它的性描写有多么冗长无聊。<br />
+玩的时候，还是要切记：一切从语境出发。不要一遇到不懂的就查单词。用小黄油的游戏文本提取工具（工具篇会讲）把玩过的文本提取出来，找一个笔记软件（我用的有道云笔记）存进去。<strong>先看完一个意义完整的场景段落</strong>，体会故事情节大意，看的时候标出不会的单词，注意：只要是<strong>拿不准的都标！不管是读音还是意思</strong>拿不准。之后再查，查到了也<strong>别费时间在原文附近标注意思</strong>。段落长度刚开始可以短一点，等你水平上来了就越来越长，我现在是一次看1万字左右。第二天，把昨天看的拿出来，看标记的单词认不认识，<strong>不会的联系上下文回想，实在回想不起来的才查辞典</strong>。这样一来，你是在各种鲜活生动的语境认识单词语法的，比你抱着辞典单词书语法书背好得多。虽然有人主张记例句，但说实话，各种工具书上的例句，<strong>语境不够完整，还有可能是为了解释这个词生造出来的</strong>，哪能和真实完整的语境相比？<br />
+从各种文体的总体难度来看，文学（远超出N1）&gt;新闻略大于小黄油（可能超出N1）和动漫&gt;音声略大于漫画（N3~N2）<br />
+千万别跟我一样，N2不到就跑去读芥川，会屎得很惨。<strong>至少也要找个现代作家</strong>（战后的）。<br />
+不管你选什么，记住我1.3讲的选材料的标准：<br />
+文字材料一定要有对应的听力音频，听力材料一定要有对应的原文（不是机器听出来的那种哈！）<br />
+趣味性比专业性更重要<br />
+材料的难度只比你的水平高一点<br />
+对了，再加一条：<strong>最好有译文可以参考。</strong><br />
+以上就是学习的基本流程了。接下来进入<strong>最具体最细节的实操部分。</strong></p>
+<p><pre><code>只是因为我没用过大家的日语这套书。
+选择教材看我说的三个标准。
+另外你要注意，大家的日语这本书和新标日一样，用的是教育语法。
+有钱尽管报，但还是要注意：
+第一，他们有没有内部自己整理的学习资料。只会讲课本的话肯定不是优秀教师。
+第二，上课形式。尽量报线下的，方便互动提问。网课的话，起码也要直播课为主。
+第三，答疑情况。你可以拿一些之前觉得难的问题去问他试试。
+我这个教程第一、二章大部分内容就不适合你了，因为根本理念和学校教育是冲突的。不过听力跟读一定要做！你可以把跟读的录音发给老师让他帮你纠正发音。
+第三章即将介绍的工具对你将来的学习会有帮助。这一章我会介绍卡西欧词典，你有钱可以买一个，比较新的型号自带发音纠正功能。
+
+</code></pre><br />
+<pre><code>自己归纳语法的系统性肯定是比不上专业语法书的。而且新标日里语法本身就比较乱。
+然后就是千万别把中日双语并行看，这对于你很难帮助你提升阅读能力甚至有害。你看的还是机翻，人翻译的都那个鬼样子何况机翻。你很可能在不知不觉间就接受了错误的东西了。
+以日语文本为主，查了各种资料也不懂的，才去看中文译文做参考（仅仅是参考！），原文为主，译文辅助。这个优先级别搞反了，不然你看半天学到一堆错误的 
+</code></pre></p>
+<pre><code>没见过专门的词源词典，日语中有的词词源不明。
+但有些词典会提到，你说的外来语这个好办。
+</code></pre>
+
+<h1 id="3"><a name="user-content-3" href="#3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3 学习工具</h1>
+<h2 id="31"><a name="user-content-31" href="#31" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1 最广泛：谷歌</h2>
+<p>这个没啥好讲的，学外语必备<br />
+一些<strong>搜索小技巧：</strong><br />
+查某词A的读法：A　読み方<br />
+查外来语原词：A　英語（这里用英语是因为外来语大多是英语）<br />
+某个专业概念不清楚：A　とは<br />
+查词源：A　語源<br />
+查近义词：A　類語（或言い換え）<br />
+查反义词：A　対義語<br />
+某个汉字A不知道：A（前提是你已经把谷歌服务的语言设置成了日语）<br />
+比较A、B两词：A　B　違い（或使い分け）</p>
+<h2 id="32"><a name="user-content-32" href="#32" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2 最权威：辞典</h2>
+<h3 id="321"><a name="user-content-321" href="#321" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.1 辞典概况和平台安装</h3>
+<p>第二章全流程将会用到的所有辞典如以下两表所示：</p>
+<p>其中大部分是可以免费获取的。<br />
+一种方式是在免费网站上在线查，另一种是预先装好辞典离线查找。需要在你的手机和PC上安装一个软件，手机是EBpocket，电脑是EBwin。资源下载、安装、使用教程如下：<br />
+<a href="https://www.bilibili.com/video/BV12J411A73u?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV12J411A73u?spm_id_from=333.337.search-card.all.click</a><br />
+<a href="https://www.bilibili.com/video/BV1aF411n7z4?spm_id_from=333.337.search-card.all.click&amp;vd_source=5b8fae166d795d6558af174ce889ec09">https://www.bilibili.com/video/BV1aF411n7z4?spm_id_from=333.337.search-card.all.click&amp;vd_source=5b8fae166d795d6558af174ce889ec09</a></p>
+<p>但要注意<strong>别像教程那样把所有辞典都下下来安装</strong>，这样用起来反而不方便了。根据我自己的使用经验，<strong>推荐安装：</strong><br />
+小学館中日日中辞典：小学館.中日日中統合辞書第2版(美化集成版)<br />
+NHK日本語発音アクセント辞典：NHK日本語発音アクセント辞典.压缩版<br />
+明鏡国語辞典：明鏡国語辞典<br />
+大辞泉：小学館.大辞泉<br />
+日本大百科全書：小学館日本大百科<br />
+大辞林：三省堂 大辞林<br />
+为了更加贴近学习实际，我将以第二章的流程为主线、介绍每个阶段最适合的辞典。</p>
+<h3 id="322-n421"><a name="user-content-322-n421" href="#322-n421" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.2 入门-N4（对应2.1）</h3>
+<p>以各种日汉辞典为主<br />
+<strong>主要推荐：沪江小D、MOJI辞书、小学館日中辞典、NHK日本語発音アクセント辞典（NHK日语发音音调辞典）</strong><br />
+在外语教学界，似乎有这么一种论调很受欢迎：学外语必须原汁原味，要用外语理解外语，不要被母语思维影响，所以一开始就要用外文原版辞典。<br />
+第一，我很怀疑“用外语理解外语”是否真的100%可行。外语学习和母语学习不是一码事。学外语是在<strong>已经掌握母语的基础上</strong>进行的，而母语对人思维方式的影响不容低估。</p>
+<p>第二，即使一个人真能克服母语的制约，又为什么一定要摆脱母语的“束缚”，而去接受一门外语的束缚呢？换句话说，母语的“束缚”就是坏的吗？恐怕未必。所谓“当局者迷，旁观者清”、“不识庐山真面目，只缘身在此山中”，<strong>局内人习以为常到忽视不看的东西，局外人反而可能从中发现不寻常</strong>。就像国外的汉学家看中国文化，或许就能看到中国人看不到的盲点，那么我们学日语，又为什么不能站在中国人的立场，去发现它和汉语的区别和联系呢？何况日语和汉语是渊源如此深厚的两门语言。一上来就放弃掉自己的立足之地，转而唯对方的立场是尊，恐怕不是什么高明的做法。<br />
+第三，说实际一点，你一上来就看日日辞典，你看得懂吗？本来这个词就不会，结果一查我超，一堆生词，再接着往下查，查到猴年马月去了。<br />
+所以初学者就不要逞强了，老老实实看日汉辞典，等水平上去了再看日日吧。而且日汉辞典<strong>绝不仅仅是给初学者看的</strong>，等你尝试着把日语翻译成汉语的时候，你就知道它有多香了。</p>
+<p>一、沪江小D、MOJI辞书<br />
+肯定有人要说这两个也值得推荐？我认为，<strong>对于初学者而言最重要的不是准确而是便捷</strong>。<br />
+初学者动词变形还不够熟练，而这俩玩意可以<strong>帮你识别出动词原形</strong>，这就是我推荐它们的首要理由。<br />
+其次，它们集成在浏览器的插件——<strong>沙拉查词</strong>当中，可以在浏览网页的时候很方便地使用。<br />
+其实你用其它类似的辞典软件都行，怎么方便怎么来就是了。<br />
+但是发音最好别看它们，发音是机器发的，而且据传发音有误，看NHK日本語発音アクセント辞典（NHK日语发音音调辞典）。</p>
+<p>二、小学館日中辞典<br />
+基本情况：<br />
+使用体验：<br />
+日本人写给学汉语的日本人用的辞典，所以时不时会冒出一些中文近义词的辨析，一般来说聊胜于无吧，不过对翻译还挺有帮助的。<br />
+作为一个小型辞典，<strong>能到达9-10万的收词量</strong>，可以说是很全了。<br />
+最重要的是比前面那俩货<strong>权威准确</strong>，有音调但是没发音。</p>
+<p>三、NHK日本語発音アクセント辞典（NHK日语发音音调辞典）<br />
+基本情况：</p>
+<p>使用体验：<br />
+最权威的发音辞典，发音来自NHK新闻播报的标准语音。<br />
+<strong>现在普遍用的是次新版</strong>，最新版有钱人可以买来看看。</p>
+<p>四、新世纪日汉双解大辞典、日汉大辞典<br />
+基本情况：收词量17、18万。买卡西欧（国版）或纸质版获取。<br />
+使用体验：<br />
+中国人翻译出版的日汉辞典，这俩是<strong>最大型</strong>的那一层级，至少我在学校图书馆都没发现比他俩更大的了。<br />
+翻译用处很大，可惜目前只在卡西欧里见过，纸质版孔夫子旧书网的价格两个加起来都六七百了。初学者用有点杀鸡用牛刀了，不是很有必要。<br />
+本身都没有发音，但是因为卡西欧里集成了NHK的发音，所以四舍五入也算是有发音了。</p>
+<p>五、新明解日汉词典<br />
+基本情况：新明解国語辞典的汉译版，翻译的第五版，收词量7.3万，还缩水了（原书7.5万）。只能网购获取。<br />
+使用体验：<br />
+纸质版几十块比较<strong>便宜</strong>（我总共花了45），相比于成百上千的小学馆中日日中，<strong>更适合用来CATTI考试，但平时用不上。</strong><br />
+最大的毛病是<strong>只有纸质版</strong>，用起来很不方便，这点就不适合初学者。<br />
+附录有很详细的<strong>音调变化规律讲解</strong>，想好好学习发音的话可以看看。<br />
+详细用法见辞典前的<strong>使用说明</strong>，我就不赘述了。</p>
+<p><strong>使用总结</strong><br />
+在浏览器安装沙拉查词，添加沪江小D和MOJI辞书<br />
+下载EBwin/EBpocket，安装小学馆日中（和中日辞典是绑定的）和NHK日本語発音アクセント辞典<br />
+初学者用这些就够了</p>
+<h3 id="323-22"><a name="user-content-323-22" href="#323-22" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.3 语法阶段（对应2.2）</h3>
+<p>这里主要介绍一些罗列条目式的语法资料。<br />
+<strong>主要推荐：本阶段推荐日本语句型辞典。到达N3之后强烈推荐絵でわかる日本語。</strong><br />
+一、日本语句型辞典（日本語文型辞典）<br />
+基本情况：3000条句型。免费获取、或买卡西欧（国版）。<br />
+使用体验：中国引进翻译的，应该是<strong>同类书里面最全的了</strong>，超出N1，任何阶段都可以用。<br />
+z-library里可以下载pdf版：<a href="https://zh.booksc.xyz/">https://zh.booksc.xyz/</a><br />
+pdf版可以查书后的五十音索引，卡西欧查找更方便。<br />
+这本书我知道得比较晚，用得不多，就不多说了。</p>
+<p>二、毎日のんびり日本語教師（悠闲度日的日语教师）<br />
+基本情况：一个在华教日语的老师写的公益性博客</p>
+<p>网址：<a href="https://nihongonosensei.net/?page_id=10246">https://nihongonosensei.net/?page_id=10246</a><br />
+使用体验：<br />
+刚学日语那会经常用，现在用得少了。<br />
+<strong>推荐到N3再用</strong>，详细讲解部分是日语，你这时候看起来可能会吃力（我当时就挺吃力）。<br />
+虽然没日本语句型辞典多，但还是超出了JLPT的范围。<br />
+有些条目会将关联条目一并总结起来，很好。<br />
+日本語TIPS栏目当中的日本語の使い分け（日语表达辨析）比较实用，其它的我没看过。<br />
+唯一缺点是<strong>有的地方汉语翻译不准确</strong>。<br />
+使用方法：<br />
+直接在语法总览页面按ctrl+F搜索页面内容。<br />
+但是要注意<strong>搜索结果有一半是重复的</strong>，因为他把语法分布按照JLPT等级、五十音顺序各排了一次。</p>
+<p>三、絵でわかる日本語（图解日语）<br />
+基本情况：810条语法<br />
+网址：<a href="https://www.edewakaru.com/">https://www.edewakaru.com/</a></p>
+<p>这个网站我<strong>最爱</strong>。用漫画的形式、通俗的语言讲解语法，富有趣味，形象生动。<br />
+内容非常丰富，有文法（语法）、〇〇シリーズ（某某系列）、類似文法（类似语法）、口語形（口语中的缩略、音变）、間違った日本語（易错表达）、類似単語（近义词）、会話表現（日常交谈常用表达）、自他動詞（自他动词）、動詞（动词）、おもしろい話（有趣的日语）、慣用句（成语谚语典故）、和製英語（和制英语）、俗語（俗语）、擬音語（拟声拟态词）、年中行事（节日活动）。<br />
+但主要是语法做的比较好，很全。其它数量不多，我也基本没看过。〇〇シリーズ（某某系列）以某个重要的词为中心，归纳一系列相关语法。讲解中涉及其它知识点时，会附上链接直接跳转，很方便。<br />
+N3之后看这个应该很流畅。其实这个阶段也可以试着看看，毕竟讲解得很通俗，而且稍有难度的词都有注音，配合沙拉查词应该不难懂。<br />
+使用方法和毎日のんびり日本語教師一样。</p>
+<p><strong>使用总结</strong><br />
+这就是我之前说不需要买蓝宝书的原因。<br />
+<strong>三套资料都采用教育语法</strong>，和新标日比较配。<br />
+但这一阶段主要还是<strong>应该以《标准日语语法》为主。</strong><br />
+能尽早开始看絵でわかる日本語就尽早开始看，真的很有意思！<br />
+日本语句型辞典<strong>全程都可使用</strong>，其它找不到的表达可以尝试查查它。</p>
+<pre><code>感谢推荐 
+不过我目前应该是没什么学古日语的需求，我古汉语都还学得一坨屎呢  
+以前在学校图书馆看到过一本书，印象很好：潘钧, 潘金生. 日本古代文言文选.21世纪日语系列教材[M]. 北京大学出版社, 2018.
+可以在读文章的过程中学习语法 
+</code></pre>
+
+<p>今天先更正一个之前1.5的说法：附表是一些熟字训。<strong>附表是熟字训和当て字</strong>。这两个概念平时没啥必要区别，反正你知道它们都是一个词整体有一个训读，难以拆成构词的每个字的读音就可以了，一概称之为熟字训也问题不大。不过为了严谨，我下面写它们之间的区别和联系，想了解的可以看看，不想看就直接跳过。<br />
+以下说法主要来自：潘钧. 日本汉字的确立及其历史演变[M]. 商务印书馆, 2013 .<br />
+当て字：あてる（当てる、充てる、中てる、宛てる）有充当、使之对应的意思。当て字就是<strong>用不完全对应的字来充当、使不完全对应的字对应</strong>。这个概念和古汉语的通假、假借之间又有着错综复杂的关系。这里为了防止混淆，就不翻译成通假或假借了，直接用日语原词。不管怎么说，这些概念的<strong>核心都是借用。</strong><br />
+广义上的当て字有如下分类：<br />
+我一层一层来说。第一类和第二类的划分依据是：1. 是共时还是历时的维度。2. 主要是有意还是无意。第一类可以称之为<strong>错字、别字、嘘字、誤字</strong>，也就是从<strong>共时</strong>的视角、将它<strong>和当时的规范用法</strong>相比较。又可细分为<strong>个人无意写错</strong>和<strong>政府有意为之</strong>。前者占主要地位，后者有些难以理解，典型例子是1956年日本政府公布的“同音の漢字による書きかえ”（基于同音汉字的替代写法）。该政策用发音相同的常用汉字替换掉非常用汉字，例如：聯合换成連合、年輩换成年配、綜合换成総合，人为地造成错字。第二类是从<strong>历时</strong>的视角、着眼于它历史演变的过程，这类在<strong>诞生之时属于有意为之</strong>，才是正儿八经的当て字。其下又分出三类：表音、表词、表句段。表音是指：<strong>借用了汉字的读音、但没用汉字的字面意思</strong>。如天婦羅（てんぷら）、目出度い（めでたい）、野良（のら，附表中有）。这些词是先有读音和对应的意思，但不知道怎么写，于是借用读音相同或相近的汉字来表记。根据借用的汉字读音的类型不同，又可分为借音（借用汉字的音读）、借训（借用汉字的训读）。一般来说，这类词的意思和汉字的意思都八竿子打不着，但有没有可能出现<strong>音同义也同（至少是相关）</strong>的情况呢？其实是有的。例如，近代日本在翻译西方新词时，造出倶楽部（クラブ）、混凝土（コンクリート）等词，可以说音和义都有所对应。还有時計（附表中有）这个词，很容易认为是湯桶読み，实际上它是音和义都有所对应的表音当て字。感兴趣的可以搜索時計　当て字，我就不细说了。总之，<strong>表音当て字就是最狭义的当て字，也是附表所采取的、人们最普遍使用的定义。</strong><br />
+表词刚好和表音反了过来：<strong>借用了汉字的意思、但没用汉字的读音</strong>。如雪崩（なだれ）、時雨（しぐれ）、五月雨（さみだれ）、煙草（タバコ）。这些词可能是汉语中固有的（如雪崩），但当在汉语中找不到对应的字（词）时，日本人会根据汉字的意思拼一个出来（如五月雨）。除了这些熟字训之外，还有一些原理相同、但<strong>应用没有真正的熟字训广泛和频繁</strong>的“准熟字训”。比如，運命（さだめ）、本気・真剣（まじ），这些往往在文艺、娱乐、广告等<strong>特定的领域</strong>出现。<br />
+表句段：在短语层面存在语序颠倒，常见于记录体、候文等变体汉文体（这个我也不懂）。如乍憚（はばかりながら），正常语序应为憚り乍ら；為念（ねんのため），正常语序应为念の為。我举一个我自己看小说时看到的例子：<br />
+彼の席だけはあったものの、自働車の中は不相変（あいかわらず）身動きさえ出来ぬ満員である（芥川龍之介　『少年』）<br />
+不相変（あいかわらず），正常语序应为相変わらず这一类在近代及其以前时不时出现，现代应该不多。其实我个人觉得这类不算当て字，因为既没借音也没接义，没有发生借用其它字的情况。<br />
+总之，<strong>附表的当て字是指表音当て字、熟字訓是指表词当て字。</strong></p>
+<h3 id="324-n3-n123"><a name="user-content-324-n3-n123" href="#324-n3-n123" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.4 N3-N1（对应2.3）</h3>
+<p>这一阶段的主角是日日辞典和各种能够在特定领域一展拳脚的资料。<br />
+<strong>主要推荐：明鏡国語辞典、大辞泉</strong><br />
+一、最好用的小型日日辞典：明鏡国語辞典<br />
+基本情况：其实还有个引进翻译第2版的《明镜日汉词典》，但只有纸质版（150以上）</p>
+<p>使用体验：我认为<strong>最好用的辞典</strong>，没有之一。<br />
+别看它只有7.3万收词量——这个在小型辞典里也很平庸，但你就是能找到你想找的东西，很<strong>实用。</strong><br />
+最大的特色是<strong>详细的语法、用法讲解</strong>。它会围绕一个词，把涉及到的语法都讲到，非常适合在到达N2之后使用。用法讲解会讲容易误用的地方，总之很符合日语学习者的实际需求。<br />
+释义比较详细且易懂。经常会给出近义词，就当扩展词汇量了。<br />
+<strong>有些词有词源讲解。外来语有原词。</strong><br />
+坊间广为流传的是第2版，因为太爱它了我特地花了250买了最新的第三版纸本（2021年出的，目前卡西欧都只收到第2版）<br />
+第3版和第2版相比，<strong>凡例和敬语的改动很大</strong>。所以大家在第2版看到敬语相关单词的讲解、<strong>尤其是它属于哪类敬语</strong>的时候，别太当回事。<br />
+堪称完美，遗憾的是<strong>没有音调。</strong></p></article></body></html>
