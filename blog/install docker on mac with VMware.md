@@ -1,7 +1,7 @@
-The  virtural machion for mac is VMware Fusion 13.6
-The Linux used CentOS7.
-The new abilities of the docker need 4.x、5.x kernel support ,    Centos 9stream is on plan.
-The hardware environment is MacBook Pro 13.7.4 (22H420)
+The  virtural machion for mac is VMware Fusion 13.6  
+The Linux used CentOS7.  
+The new abilities of the docker need 4.x、5.x kernel support ,    Centos 9stream is on plan.  
+The hardware environment is MacBook Pro 13.7.4 (22H420)  
 
 
 
@@ -42,10 +42,10 @@ no setting in vmware mac version
 need to change it  by manual
 
 the route gived by chatgpt 
-‘’‘找到 VMware Fusion 网络配置文件，这通常位于：
+```找到 VMware Fusion 网络配置文件，这通常位于：
 	•	/Library/Application Support/VMware Fusion/
 	•	或者 /etc/vmware/ 目录下的 vmnet 配置文件。
-’‘’
+```
 the actual route
 
 > /Library/Preferences/VMware Fusion/vmnet8
