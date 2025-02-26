@@ -1,60 +1,56 @@
-The  virtural machion for mac is VMware Fusion 13.6  
-The Linux used CentOS7.  
-The new abilities of the docker need 4.x、5.x kernel support ,    Centos 9stream is on plan.  
-The hardware environment is MacBook Pro 13.7.4 (22H420)  
+### Virtual Machine Configuration
 
+- **VMware Fusion Version**: 13.6  
+- **Linux**: CentOS 7  
+- **Docker Requirements**: Docker’s newer features require kernel support from version 4.x or 5.x. CentOS 9 Stream is planned for support.  
+- **Hardware**: MacBook Pro 13.7.4 (22H420)  
 
+---
 
-## 1 download linux mirror
+### 1. Download Linux Mirror
 
-From aliyun mirror spot, download  CentOS-7-x86_64-DVD-2207-02.iso
+Download CentOS-7-x86_64-DVD-2207-02.iso from Aliyun mirror:
 
-> https://mirrors.aliyun.com/centos/7/isos/x86_64/?spm=a2c6h.25603864.0.0.7cf64511v2QVXt
+> [Aliyun Mirror](https://mirrors.aliyun.com/centos/7/isos/x86_64/?spm=a2c6h.25603864.0.0.7cf64511v2QVXt)
 
-use vmware fusion 10 install ，and the error is reported
+When using VMware Fusion 10, an error occurred:
 
-> Unable to retrieve kernel symbols. 
-> Failed to initialize monitor device.
+> **Unable to retrieve kernel symbols. Failed to initialize monitor device.**
 
-analyse the reason ,from the adivce of chatgpt
+Suggested fixes from ChatGPT:
+- Increase memory and CPU cores
+- In the "Processors & Memory" section, select "Enable hypervisor applications in this virtual machine"
+- Switch the mirror to CentOS-7-x86_64-Minimal-2207-02.iso
+- Verify the checksum using `shasum -a 256 file`
 
-+ increase the memory 、cpu core
-+ enter the option（Processors & Memory） ，select "Enable hypervisor applications in this virtual machine"（
-+ change the mirror CentOS-7-x86_64-Minimal-2207-02.iso
-+ check the checksum shasum -a 256 file
+No effect. After checking VMware logs, many configuration files were missing, leading to a reinstallation of VMware Fusion 13.
 
-no effect
+> [VMware Installation Troubleshooting](https://search.ddooo.com/search.html?wd=vmware%20fusion)
 
-check the vmware logs and find many errors, various config files missed ，re install vmware 13
+This step took the most time due to:
+- Slow official site
+- Outdated VMware installation with missing configurations
+- Misleading online solutions
 
-> https://search.ddooo.com/search.html?wd=vmware%20fusion
+---
 
-this step waste most of the time
+### 2. Set Static IP on Linux
 
-- the official site  is too slow
-- VMware was installed many years ago, and lost many configs
-- misleaded by  the solutions from the Internet
+To create a cluster, DHCP is not suitable, so manual configuration was required. The route provided by ChatGPT was:
 
-## 2 set linux static  address
+```bash
+# Locate VMware Fusion network config
+# /Library/Application Support/VMware Fusion/ or /etc/vmware/
 
-need to create a cluster，so can't use the dhcp
-no setting in vmware mac version
-need to change it  by manual
-
-the route gived by chatgpt 
-```找到 VMware Fusion 网络配置文件，这通常位于：
-	•	/Library/Application Support/VMware Fusion/
-	•	或者 /etc/vmware/ 目录下的 vmnet 配置文件。
-```
-the actual route
+The actual path is :
 
 > /Library/Preferences/VMware Fusion/vmnet8
 
-## 3 modify mac hosts
+## 3 Modify Mac Hosts File
 
-add address alias for the daily manage
+Add address aliases for easier management.
 
-## 4 setting yum repo file
+## 4 Set Up YUM Repository
 
 ```
 cd /etc/yum.repos.d
@@ -64,11 +60,13 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos
 yum install -y yum-utils
 ```
 
-## 5 install docker  
+## 5 Install Docker 
 
- one command , easy install, but a hint for the low version
+Use the following command to install Docker easily, though it shows a warning about the CentOS version:
 
 > curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+
+Warning message:
 
 ```
 提示
@@ -76,29 +74,27 @@ This Linux distribution (centos 7) reached end-of-life and is no longer supporte
     No updates or security fixes will be released for this distribution, and users are recommended
     to upgrade to a currently maintained version of centos.
 ```
-the daocloud can't be connected
+Note: Daocloud is unavailable.
 
 > curl -sSL https://get.daocloud.io/docker | sh
 
-
-
-check if install succeed
+Check installation:
 
 >  docker version
 
-start docker
+Start Docker:
 
 > systemctl start docker
 
-delete the install files
+Clean up installation files:
 
 > yum remove docker-ce
 
-删除镜像、容器 配置文件等内容
+Remove Docker images, containers, and config files:
 
 > rm -rf /var/lib/docker
 
 
-## summary
+## Summary
 
-everything  goes on fine except the first  step， for the reason that  I am not familiar with mac in development.
+Everything went smoothly except for the first step, as I wasn’t familiar with macOS for development.
