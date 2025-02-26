@@ -41,7 +41,7 @@ To create a cluster, DHCP is not suitable, so manual configuration was required.
 ```bash
 # Locate VMware Fusion network config
 # /Library/Application Support/VMware Fusion/ or /etc/vmware/
-
+```
 The actual path is :
 
 > /Library/Preferences/VMware Fusion/vmnet8
