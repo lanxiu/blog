@@ -11,7 +11,7 @@
 
 Download CentOS-7-x86_64-DVD-2207-02.iso from Aliyun mirror:
 
-> [Aliyun Mirror](https://mirrors.aliyun.com/centos/7/isos/x86_64/?spm=a2c6h.25603864.0.0.7cf64511v2QVXt)
+> [CentOS-7-x86_64-DVD](https://mirrors.aliyun.com/centos/7/isos/x86_64/?spm=a2c6h.25603864.0.0.7cf64511v2QVXt)
 
 When using VMware Fusion 10, an error occurred:
 
@@ -25,7 +25,7 @@ Suggested fixes from ChatGPT:
 
 No effect. After checking VMware logs, many configuration files were missing, leading to a reinstallation of VMware Fusion 13.
 
-> [VMware Installation Troubleshooting](https://search.ddooo.com/search.html?wd=vmware%20fusion)
+> [VMware Installation](https://search.ddooo.com/search.html?wd=vmware%20fusion)
 
 This step took the most time due to:
 - Slow official site
