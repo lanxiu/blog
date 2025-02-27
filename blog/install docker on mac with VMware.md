@@ -3,7 +3,8 @@
 - **VMware Fusion Version**: 13.6  
 - **Linux**: CentOS 7  
 - **Docker Requirements**: Docker’s newer features require kernel support from version 4.x or 5.x. CentOS 9 Stream is planned for support.  
-- **Hardware**: MacBook Pro 13.7.4 (22H420)  
+- **Hardware**: MacBook Pro
+- **MacOS**: 13.7.4 (22H420)  
 
 ---
 
@@ -49,6 +50,20 @@ The actual path is :
 ## 3 Modify Mac Hosts File
 
 Add address aliases for easier management.
+
+> /etc/hosts
+
+```
+192.168.174.20 leader20
+192.168.174.21 leader21 
+192.168.174.22 leader22 
+192.168.174.23 leader23 
+
+192.168.174.31 worker31 
+192.168.174.32 worker32 
+192.168.174.33 worker33 
+192.168.174.34 worker34
+```
 
 ## 4 Set Up YUM Repository
 
