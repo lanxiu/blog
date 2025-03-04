@@ -39,11 +39,11 @@ This four  filters are also used to track a request by set  a request  id.
 
 
 + Gateway Filters:
-Pre-filters (GlobalFilter): Modify incoming requests (e.g., add properties).
-Response Filters: Modify outgoing responses (e.g., append properties from the request).
+  - Pre-filters (GlobalFilter): Modify incoming requests (e.g., add properties).
+  - Response Filters: Modify outgoing responses (e.g., append properties from the request).
 + Service-side Filters:
-Servlet Filters: Intercept requests to transform them (e.g., map properties to a POJO).
-Interceptors (ClientHttpRequestInterceptor): Forward properties from the original request to a new request.
+  - Servlet Filters: Intercept requests to transform them (e.g., map properties to a POJO).
+  - Interceptors (ClientHttpRequestInterceptor): Forward properties from the original request to a new request.
 + Usage: These filters are commonly used for request tracking (e.g., setting a unique request ID).
 
 
@@ -210,9 +210,9 @@ discovery:
 
 + Other Configurations to Check:
   + Setting preferIpAddress: true
-+ Removing the property server.waitTimeInMsWhenSyncEmpty: 5
-+ Verifying that the URI is set as lb://licensing-service ("licensing-service" is not case sensative  )
-+ Using proper YAML formatting for discovery.locator (both discovery.locator: and are acceptable)
+  + Removing the property server.waitTimeInMsWhenSyncEmpty: 5
+  + Verifying that the URI is set as lb://licensing-service ("licensing-service" is not case sensative  )
+  + Using proper YAML formatting for discovery.locator (both discovery.locator: and are acceptable)
 
 
 ** Final Notes**
