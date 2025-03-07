@@ -2,10 +2,12 @@
 ## **1 ELK ERROR**
 ### 1.1 Maven dependence error
 
++ Error:  
 > Cannot resolve org.apache.commons:commons-pool2:2.7.0
 
-
-+ Solution: move the location from the file end to the middle
++ Solution:
+  Move the location from the end of file  to the middle
+  
 ```
         <dependency>
             <groupId>redis.clients</groupId>
@@ -14,7 +16,7 @@
         </dependency>
 ```
 
-###  1.2 The message usage
+###  1.2  Message Usage
 
 + Send
 
@@ -33,18 +35,24 @@ source.output.send()
 
 ### 1.3 @Value Error
 
++ Error:  
 > @Value("${redis.port)")
-+Correct
++ Correct:  
 > @Value("${redis.port}")
 
 
 ###  1.4 Docker install zookeeper kafka redis 
 
-> kafka redis download ，but zookeeper download error
++ Issue:  
+> kafka and redis downloaded ，but zookeeper download fails
 
 + Solution: retry three times and more
+  
+Retry downloading multiple times.
 
 + the config wasn't use ,but maybe useful in the future
+
+  Note: The config might not be in use now, but could be useful in the future.
 
 ```
 
@@ -75,7 +83,9 @@ source.output.send()
 
  
 
-### 1.5 Formate Error
+### 1.5 Formatting Error
+
++ Original:
 
 ```
 
@@ -106,7 +116,7 @@ source.output.send()
           - "kafka"
 ```
 
-+ Correct
++ Corrected:
 
 ```
   kafka:
@@ -129,7 +139,7 @@ source.output.send()
           - "kafka"
 ```
 
-exec
+Run the command:
 
 > docker compose up -d kafka
 
@@ -146,21 +156,29 @@ exec
 
 > RedisConnectionFailureException: java.net.SocketTimeoutException: Read timed out; 
 
-+ Check: the result is ok 
++ Check: the result is ok
+
+  Check Redis connection using:
 
 > docker exec -it redis redis-cli
 > redis-cli CONFIG GET protected-mode
 
 + Reason: my VPN Proxy is running ,it uses the alias not the ip
 
+  VPN proxy is running and uses the alias instead of the IP.
+
 ### 1.8 No instances available for localhost
 
 + Check:
 
-The licensing-service  can't find instance, but  the  eureka server  is running well and the service xml can be access
+The licensing-service  can't find instances, but  the  eureka server  is running well and the service xml can be access
+
+The licensing-service can't find instances, even though Eureka server is running fine and the service XML is accessible.
 
 + Solution:
-wait  a moment , and it's ok
+wait for a moment , and it's ok
+
+Wait for a moment, and the issue should resolve.
 
 ### 1.9 Logstash Connection Error
 
@@ -168,7 +186,7 @@ wait  a moment , and it's ok
 
 > Log destination leader20:5044: Waiting 28178ms before attempting 
 
-+ Analyse
++ Analysis
 
 ```
 telnet leader20 5044  
@@ -195,7 +213,7 @@ sudo firewall-cmd --reload
 
 + reason:
 
-The port is set to 5000 in logstash.conf
+The port was set to 5000 in logstash.conf
 
 + question:
 
@@ -219,10 +237,11 @@ output:
 +  Solution:
 
 add the virtual machine memory
+Add more virtual machine memory.
 
 > free -h
 
-> docker compose up -
+> docker compose up -  elaticsearch
 
 
 ### 1.11  Docker Compose Start
@@ -262,9 +281,11 @@ Command can't apply the change  in docker-compose file
 
 
 
-###  1.13 Seluth Log
+###  1.13 Sleuth Log
 
 It only convert the logging messages, so use this dependency to change log4j messages
+
+To convert log messages, use the following dependency to convert log4j messages:
 
 ```
 
@@ -275,7 +296,7 @@ It only convert the logging messages, so use this dependency to change log4j mes
 
 ```
 
-### 1.14 Tips
+### 1.14 Additional Tips
 
 + Message Service  Url
 
