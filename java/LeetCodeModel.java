@@ -13,6 +13,8 @@ import java.util.Vector;
 
 public class LeetCodeModel {
 
+	//LeetCode 3：无重复字符的最长子串
+
 	public int lengthOfLongestSubstring(String s) {
 
 		Map<Character, Integer> map = new HashMap<Character, Integer>();
@@ -35,29 +37,7 @@ public class LeetCodeModel {
 
 	}
 
-	//
-
-	public int lengthOfLongestSubstring1111(String s) {
-
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
-		int left = 0, max = 0;
-		for (int right = 0; right < s.length(); right++) {
-
-			char tmp = s.charAt(right);
-
-			if (map.containsKey(tmp))
-				// ERROR +1 漏了
-				left = Math.max(left, map.get(tmp) + 1);
-
-			map.put(tmp, right);
-
-			max = Math.max(max, right - left + 1);
-
-		}
-
-		return max;
-
-	}
+	 
 
 	// 至多包含 K 个不同字符的最长子串
 
@@ -95,7 +75,7 @@ public class LeetCodeModel {
 
 	}
 
-	// 最小覆盖子串
+	// 76 最小覆盖子串
 	// 给定两个字符串 s 和 t，长度分别是 m 和 n，返回 s 中的 最短窗口 子串，
 	// 使得该子串包含 t 中的每一个字符（包括重复字符）。如果没有这样的子串，返回空字符串 ""。
 
@@ -248,12 +228,14 @@ public class LeetCodeModel {
 
 	}
 
-	// 和为k的子数组
+	// 560 和为k的子数组
 
 	public int subarraySum(int[] nums, int k) {
 
 		// value count
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+
+		//没有这行代码，会漏掉所有 “从开头开始且和为 k” 的子数组（比如[3]、[1,2]这类场景）。
 		map.put(0, 1);
 		// value index
 		int sum = 0;
@@ -266,7 +248,7 @@ public class LeetCodeModel {
 				result += map.get(sum - k);
 			}
 
-			// k = 0 为啥要作特殊处理
+			// k = 0 为啥要作特殊处理  ,因为前边有个 0,1的键值对存了进去
 			if (k == 0 && map.containsKey(sum - k)) {
 				result += map.get(sum - k) - 1;
 			}
@@ -285,7 +267,7 @@ public class LeetCodeModel {
 
 	}
 
-	// 两数之和
+	// 1 两数之和
 
 	public int[] twoSum(int[] nums, int target) {
 
